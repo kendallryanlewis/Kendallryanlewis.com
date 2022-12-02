@@ -11,9 +11,9 @@ jobs:
         id: deploy
         uses: pinkasey/cpanel-deploy-action@v1.0.0
         with:
-          hostname: 'kendallryanlewis.com'
+          hostname: ${{ secrets.FTP_SERVER }}
           repository_root: '/home/my_account/repositories/my_repository'
           branch: main
-          cpanel_token: '9ZXY54XJXDL2QVNG3U5RH93ZVED1VLDT'
+          cpanel_token: ${{ secrets.FTP_TOKEN }}
       - name: echo deploy-duration
         run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
