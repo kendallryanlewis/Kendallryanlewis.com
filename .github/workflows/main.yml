@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Deploy to cPanel
         id: deploy
-        uses: pinkasey/cpanel-deploy-action@v1.0.0
+        uses: pinkasey/cpanel-deploy-action@v1.1.1
         with:
           hostname: ${{ secrets.FTP_SERVER }}
           repository_root: '/home/my_account/repositories/my_repository'
