@@ -11,7 +11,7 @@ jobs:
         id: deploy
         uses: pinkasey/cpanel-deploy-action@v1.0.0
         with:
-          hostname: 'ftp://www.kendallryanlewis.com'
+          hostname: 'admin_github@kendallryanlewis.com'
           repository_root: '/home/my_account/repositories/my_repository'
           branch: main
           cpanel_token: '9ZXY54XJXDL2QVNG3U5RH93ZVED1VLDT'
