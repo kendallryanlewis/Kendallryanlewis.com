@@ -15,6 +15,5 @@ jobs:
           repository_root: '/home/my_account/repositories/my_repository'
           branch: main
           cpanel_token: '9ZXY54XJXDL2QVNG3U5RH93ZVED1VLDT'
-          cpanel_username: 'oalqr3yca8jb'
       - name: echo deploy-duration
         run: echo "Deployment took ${{ steps.deploy.outputs.duration }} milliseconds"
