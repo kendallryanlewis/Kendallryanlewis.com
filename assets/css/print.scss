@@ -1,0 +1,119 @@
+@import '../css/variables.scss';
+
+/* defaults to print.css */
+$black: #606060;
+$light-black: #414141;
+
+.show-on-print {
+    display: none;
+    color: $black;
+    padding-bottom: 2rem;
+}
+
+/* at the bottom of your global styles.css (after Bootstrap) */
+@media print {
+
+    /* 1) Make the page/container wide enough to hit the md+ breakpoints */
+    body,
+    .container,
+    .container-fluid {
+        min-width: 960px !important;
+        /* ≥ Bootstrap’s 768px md threshold */
+    }
+
+    /* 2) Re-enable your col-md classes */
+    .col-md-4 {
+        -ms-flex: 0 0 33.3333% !important;
+        flex: 0 0 33.3333% !important;
+        max-width: 33.3333% !important;
+    }
+
+    .col-lg-6 {
+        -ms-flex: 0 0 50% !important;
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+    }
+
+    /* if you need other sizes, override them too: */
+    /* .col-md-6 { … }   .col-md-3 { … } */
+
+    /* 3) Restore md-order classes */
+    .order-md-1 {
+        order: 1 !important;
+    }
+
+    .order-md-2 {
+        order: 2 !important;
+    }
+
+    .order-md-3 {
+        order: 3 !important;
+    }
+
+    .order-md-4 {
+        order: 4 !important;
+    }
+
+    /* etc… */
+
+    /* 4) Tidy up padding/margins if needed */
+    .pe-5 {
+        padding-right: 1.5rem !important;
+    }
+
+    /* any selector you like… */
+    .hide-on-print {
+        display: none !important;
+    }
+
+    .show-on-print {
+        display: block !important;
+    }
+
+    .print-header {
+        font-size: 3rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 12px !important;
+    }
+
+    h1 {
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+        padding-bottom: 1rem;
+    }
+
+    .light-black {
+        color: $light-black;
+    }
+
+    .border,
+    .border-start {
+        border-color: $gold !important;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* If you use container-fluid elsewhere and want to reset its gutters: */
+    .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    span {
+        color: $black !important;
+    }
+
+    .timeline {
+        border-left: 1px solid $gold;
+    }
+}
